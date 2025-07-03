@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+    background: #fff8f0;
+    color: #3e2723;
+}
+header {
+    background: linear-gradient(90deg, #f8bfae 0%, #f7cac9 100%);
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+}
+.logo {
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin-bottom: 1rem;
+}
+h1 {
+    font-family: 'Dancing Script', cursive, sans-serif;
+    font-size: 2.8rem;
+    margin: 0.2rem 0 0.5rem 0;
+    color: #a0522d;
+}
+.tagline {
+    font-size: 1.2rem;
+    color: #7b3f00;
+    margin-bottom: 1rem;
+}
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 12px rgba(160, 82, 45, 0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+.gallery img:hover {
+    transform: scale(1.04) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(160, 82, 45, 0.18);
+}
+.about, .cta {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(160, 82, 45, 0.07);
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+}
+.about h2, .cta h2 {
+    color: #a0522d;
+    font-family: 'Dancing Script', cursive, sans-serif;
+    font-size: 2rem;
+    margin-top: 0;
+}
+.order-btn {
+    display: inline-block;
+    background: #f8bfae;
+    color: #7b3f00;
+    font-weight: bold;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(160, 82, 45, 0.10);
+    transition: background 0.2s, color 0.2s;
+}
+.order-btn:hover {
+    background: #f7cac9;
+    color: #a0522d;
+}
+footer {
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    background: #f8bfae;
+    color: #7b3f00;
+    font-size: 1rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    margin-top: 2rem;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .about, .cta {
+        padding: 1.2rem 0.7rem;
+    }
+    .gallery {
+        gap: 0.7rem;
+    }
+}
