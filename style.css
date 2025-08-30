@@ -1,27 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 body {
     margin: 0;
     font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
-    background: #fff8f0;
+    background: #FEFCF7;
     color: #3e2723;
 }
 header {
     background: linear-gradient(90deg, #f8bfae 0%, #f7cac9 100%);
     text-align: center;
+    background: #FEFCF7;
     padding: 2rem 1rem 1rem 1rem;
 }
 .logo {
-    width: 120px;
+    width: 200px;
     border-radius: 50%;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     margin-bottom: 1rem;
 }
 h1 {
-    font-family: 'Dancing Script', cursive, sans-serif;
+    font-family: 'Allura', cursive, sans-serif;
     font-size: 2.8rem;
     margin: 0.2rem 0 0.5rem 0;
     color: #a0522d;
 }
 .tagline {
+    font-family: 'Allura', cursive, sans-serif;
     font-size: 1.2rem;
     color: #7b3f00;
     margin-bottom: 1rem;
@@ -57,14 +59,14 @@ main {
 }
 .about h2, .cta h2 {
     color: #a0522d;
-    font-family: 'Dancing Script', cursive, sans-serif;
+    font-family: 'Allura', cursive, sans-serif;
     font-size: 2rem;
     margin-top: 0;
 }
 .order-btn {
     display: inline-block;
-    background: #f8bfae;
-    color: #7b3f00;
+    background: #385FAC;
+    color: #fff;
     font-weight: bold;
     padding: 0.7rem 1.5rem;
     border-radius: 2rem;
@@ -73,18 +75,24 @@ main {
     transition: background 0.2s, color 0.2s;
 }
 .order-btn:hover {
-    background: #f7cac9;
-    color: #a0522d;
+    background: #274073;
+    color: #fff;
 }
 footer {
     text-align: center;
     padding: 1.5rem 0 1rem 0;
-    background: #f8bfae;
+    background: #FEFCF7;
     color: #7b3f00;
     font-size: 1rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     margin-top: 2rem;
+}
+span.loulou-norah {
+  color: #E64B32;
+}
+span.patisserie {
+  color: #07396C;
 }
 @media (max-width: 600px) {
     h1 {
