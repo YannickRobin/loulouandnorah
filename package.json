@@ -1,0 +1,11 @@
+{
+  "name": "loulouandnorah",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "generate-qr": "node scripts/generate_qr.js"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.1"
+  }
+}
