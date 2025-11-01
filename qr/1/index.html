@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://instagram.com/loulouandnorah_patisserie">
-    <title>Redirecting...</title>
+  <title>Redirecting...</title>
+  <!-- We'll send a GA event for QR scans, then redirect via JS to ensure the event is sent. -->
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4MF2KBVJ8M"></script>
@@ -12,6 +12,49 @@
   gtag('js', new Date());
 
   gtag('config', 'G-4MF2KBVJ8M');
+</script>
+<!-- Send a custom GA event 'scan_qr_code' and then redirect. -->
+<script>
+  (function() {
+    const targetUrl = 'https://instagram.com/loulouandnorah_patisserie';
+    const qrId = '1';
+
+    function sendEventAndRedirect() {
+      try {
+        if (typeof gtag === 'function') {
+          // send event with an id so you can filter in GA
+          gtag('event', 'scan_qr_code', {
+            'method': 'qr',
+            'qr_id': qrId,
+          });
+        }
+      } catch (e) {
+        // ignore errors and proceed to redirect
+        console.warn('gtag error', e);
+      }
+
+      // short delay to give the analytics call a chance to be queued/sent
+      // (keep small to avoid UX slowdown)
+      setTimeout(function() {
+        window.location.replace(targetUrl);
+      }, 300);
+    }
+
+    // If gtag is not yet available, poll briefly then send+redirect.
+    if (typeof gtag === 'function') {
+      sendEventAndRedirect();
+    } else {
+      let attempts = 0;
+      const maxAttempts = 10;
+      const iv = setInterval(function() {
+        attempts++;
+        if (typeof gtag === 'function' || attempts >= maxAttempts) {
+          clearInterval(iv);
+          sendEventAndRedirect();
+        }
+      }, 100);
+    }
+  })();
 </script>
 <body>
     <p>Redirecting to <a href="https://instagram.com/loulouandnorah_patisserie">Instagram</a>...</p>
